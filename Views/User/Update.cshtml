@@ -1,0 +1,22 @@
+@model Minecraft.Models.User
+@{
+    ViewData["Title"] = "Update User";
+}
+
+<h1>Update User</h1>
+<form asp-action="Update" method="post">
+    <input asp-for="Id" type="hidden" />
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Email"></label>
+        <input asp-for="Email" />
+    </div>
+    <div>
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" />
+    </div>
+    <button type="submit">Update</button>
+</form>

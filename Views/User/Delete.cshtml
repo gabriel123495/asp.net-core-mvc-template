@@ -1,0 +1,15 @@
+@using Minecraft.Models
+@model User
+@{
+    ViewData["Title"] = "Delete User";
+}
+
+<h1>Delete User</h1>
+<div>
+    <h2>@Model.Name</h2>
+    <p>@Model.Email</p>
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit">Confirm Delete</button>
+    </form>
+</div>
